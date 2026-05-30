@@ -1,0 +1,8 @@
+data class Product(val name: String, val price: Double)
+val inventory = listOf(Product("Laptop", 1000.0), Product("Mouse", 25.0), Product("Keyboard", 60.0))
+fun main()
+{
+    val finalProducts= inventory.map{inventory->Pair(inventory.name,inventory.price*0.9)}.filter{it.second>50.0}
+    println("Final products: $finalProducts")
+}
+                                                                                                                            
